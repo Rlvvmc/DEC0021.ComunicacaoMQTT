@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "concurrently": "^9.2.3"
+  },
+
+  "scripts": {
+    "react": "npm --prefix Frontend/React run dev",
+    "server": "npm --prefix Server run dev",
+    "agents": "cd jacamo && gradlew run",
+    "dev": "concurrently -n REACT,SERVER,AGENTS -c green,blue,magenta \"npm run react\" \"npm run server\" \"npm run agents\""
+  }
+}
+
