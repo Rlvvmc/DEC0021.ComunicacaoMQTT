@@ -9,9 +9,6 @@ Para isto, são utilizados microcontroladores ESP32 programados com base no sist
 
 - [Hardware Utilizado](#hardware-utilizado)
 - [Instalação](#instalação)
-   1. [Mosquitto](#eclipse-mosquitto)
-   2. [JaCaMo](#jacamo)
-   3. [Zephyr](#zephyr)
 - [Configuração do Hardware](#configuração-do-hardware)
 - [Exemplo de Funcionamento](#exemplo-de-funcionamento)
 - [Diagnostico de Problemas e Soluções](#diagnostico-de-problemas-e-soluções)
@@ -62,7 +59,8 @@ Exemplos de comunicação:
 o Esp está programado para periodicamente enviar a leitura do sensor de distancia:
 
 ![Conexões do circuito](Images/EnvioDeDados.png)
-3. Envio do comando "ledOn" para o ESP32
+
+2. Envio do comando "ledOn" para o ESP32
 A interface(ou agentes) podem publicar a mensagem "ledOn". O ESP32 ve esta mensagem e interpreta como o comando de ligar o led. Da mesma maneira, interpreta "ledOff" como o comando de desligar o led.
 
 ![Conexões do circuito](Images/RecebimentoDeDados.png)
