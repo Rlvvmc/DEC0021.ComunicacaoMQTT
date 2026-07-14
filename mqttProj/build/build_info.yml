@@ -1,0 +1,61 @@
+cmake:
+  application:
+    configuration-dir: '/home/anderson/zephyrproject/exemplos/distancia'
+    source-dir: '/home/anderson/zephyrproject/exemplos/distancia'
+  board:
+    name: 'esp32_devkitc'
+    path:
+     - '/home/anderson/zephyrproject/zephyr/boards/espressif/esp32_devkitc'
+    qualifiers: 'esp32/procpu'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/anderson/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/anderson/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu.dts'
+     - '/home/anderson/zephyrproject/exemplos/distancia/boards/esp32_devkitc_procpu.overlay'
+    include-dirs:
+     - '/home/anderson/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/anderson/zephyrproject/modules/hal/atmel/include'
+     - '/home/anderson/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/anderson/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/anderson/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/anderson/zephyrproject/modules/hal/microchip/include'
+     - '/home/anderson/zephyrproject/modules/hal/microchip/dts'
+     - '/home/anderson/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/anderson/zephyrproject/modules/hal/nxp/dts'
+     - '/home/anderson/zephyrproject/modules/hal/stm32/dts'
+     - '/home/anderson/zephyrproject/modules/hal/ti/dts'
+     - '/home/anderson/zephyrproject/zephyr/include'
+     - '/home/anderson/zephyrproject/zephyr/include/zephyr'
+     - '/home/anderson/zephyrproject/zephyr/dts/common'
+     - '/home/anderson/zephyrproject/zephyr/dts/vendor'
+     - '/home/anderson/zephyrproject/zephyr/dts/rx'
+     - '/home/anderson/zephyrproject/zephyr/dts/x86'
+     - '/home/anderson/zephyrproject/zephyr/dts/xtensa'
+     - '/home/anderson/zephyrproject/zephyr/dts/sparc'
+     - '/home/anderson/zephyrproject/zephyr/dts/riscv'
+     - '/home/anderson/zephyrproject/zephyr/dts/posix'
+     - '/home/anderson/zephyrproject/zephyr/dts/arm64'
+     - '/home/anderson/zephyrproject/zephyr/dts/arm'
+     - '/home/anderson/zephyrproject/zephyr/dts/arc'
+     - '/home/anderson/zephyrproject/zephyr/dts'
+    user-files:
+     - '/home/anderson/zephyrproject/exemplos/distancia/boards/esp32_devkitc_procpu.overlay'
+  kconfig:
+    files:
+     - '/home/anderson/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu_defconfig'
+     - '/home/anderson/zephyrproject/exemplos/distancia/prj.conf'
+    user-files:
+     - '/home/anderson/zephyrproject/exemplos/distancia/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/anderson/zephyr-sdk-1.0.1'
+  zephyr:
+    version: '4.4.99'
+    zephyr-base: '/home/anderson/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/anderson/zephyrproject/.vevn/bin/west build -p always -b esp32_devkitc/esp32/procpu'
+  topdir: '/home/anderson/zephyrproject'
+  version: '1.5.0'

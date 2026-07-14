@@ -1,0 +1,31 @@
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+    hcsr04: hcsr04 {
+        compatible = "hc-sr04";
+        status = "okay";
+
+        trigger-gpios = <&gpio0 18 GPIO_ACTIVE_HIGH>;
+        echo-gpios = <&gpio0 19 GPIO_ACTIVE_HIGH>;
+        
+    };
+
+    leds {
+        compatible = "gpio-leds";
+
+        status_led: led0 {
+            gpios = <&gpio0 23 GPIO_ACTIVE_HIGH>;
+        };
+    };
+
+    wifi: wifi {
+        status = "okay";
+    };
+
+    aliases {
+        distance0 = &hcsr04;
+        led0 = &status_led;
+    };
+
+   
+};
